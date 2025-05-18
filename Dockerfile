@@ -17,7 +17,7 @@ COPY . .
 RUN yarn build
 
 # Etapa 2: Producción
-FROM node:18-alpine AS production
+FROM node:20-alpine AS production
 
 # Crear directorio de trabajo
 WORKDIR /app
