@@ -27,7 +27,7 @@ jobs:
       - name: 🚀 Conectar y actualizar contenedor
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            cd /home/${{ secrets.SSH_USER }}/cmd_mail
+            cd /home/${{ secrets.SSH_USER }}/jis-mailer-ms
           
             export RMQ_HOST="${{ secrets.RMQ_HOST }}"
             export RMQ_USER="${{ secrets.RMQ_USER }}"
