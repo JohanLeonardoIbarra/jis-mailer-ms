@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  mail-service:
+    container_name: mail-service
+    build: .
+    restart: always
+    environment:
+      - RMQ_HOST=${RMQ_HOST}
+      - RMQ_USER=${RMQ_USER}
+      - RMQ_PASS=${RMQ_PASS}
+      - RMQ_QUEUE=${RMQ_QUEUE}
+      - MAIL_HOST=${MAIL_HOST}
+      - MAIL_PORT=${MAIL_PORT}
+      - MAIL_USER=${MAIL_USER}
+      - MAIL_PASS=${MAIL_PASS}
